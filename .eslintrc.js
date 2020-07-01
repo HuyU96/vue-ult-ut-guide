@@ -7,6 +7,8 @@ module.exports = {
 
   'extends': [
     'plugin:vue/essential',
+    'plugin:vue/strongly-recommended',
+    'plugin:vue/recommended',
     'eslint:recommended'
   ],
 
@@ -16,7 +18,25 @@ module.exports = {
 
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'vue/html-closing-bracket-newline': ['error', {
+      'singleline': 'never',
+      'multiline': 'never'
+    }],
+    'vue/html-self-closing': ['error', {
+      'html': {
+        'void': 'never',
+        'normal': 'never',
+        'component': 'always'
+      }
+    }],
+    'vue/max-attributes-per-line': ['error', {
+      'singleline': 2,
+      'multiline': {
+        'max': 1,
+        'allowFirstLine': true
+      }
+    }],
   },
 
   overrides: [
