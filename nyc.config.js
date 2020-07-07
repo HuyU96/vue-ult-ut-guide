@@ -11,5 +11,9 @@ module.exports = {
   'reporter': [
     'text',
     'lcov'
-  ]
+  ],
+  'require': [
+    // '@babel/register'
+  ],
+  'all': true
 }
